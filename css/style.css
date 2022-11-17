@@ -7,7 +7,7 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .background {
@@ -88,11 +88,12 @@ body {
 
 .contener {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   padding: 0 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 80px 1fr 70px;
+  gap: 10px;
 }
 .contener .footer {
   grid-column: 1/span 2;
@@ -182,8 +183,11 @@ body {
 }
 .contener .textes h1 {
   font-size: 4em;
-  line-height: 40px;
+  line-height: 20px;
   margin-bottom: 20px;
+}
+.contener .textes .titre {
+  line-height: 60px;
 }
 .contener .textes .sous-titre {
   font-size: 0.5em;
@@ -200,10 +204,15 @@ body {
 .contener .textes .para span {
   color: #009AEA;
 }
-.contener .textes a {
-  margin-right: 20px;
+.contener .textes .btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
 }
-.contener .textes button {
+.contener .textes .btns button {
   width: 170px;
   height: 40px;
   border-radius: 30px;
@@ -229,6 +238,177 @@ body {
   width: 100%;
   max-width: 700px;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 1400px) {
+  .contener {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .contener {
+    padding: 0 10px;
+  }
+  .contener .textes h1 {
+    font-size: 2.3em;
+    line-height: 5px;
+  }
+  .contener .textes .para {
+    font-size: 1.3em;
+  }
+  .contener .textes .para br {
+    display: none;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .background .calque-2 .stroke {
+    display: none;
+  }
+  .background .calque-2 .cercle-video {
+    display: none;
+  }
+  .contener .video {
+    display: none;
+  }
+  .dis-video {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+  }
+  .ds-1 {
+    position: fixed;
+    right: 10px;
+    bottom: 80px;
+  }
+  .ds-1 svg {
+    fill: #652A81;
+  }
+  .video-none {
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    background: linear-gradient(45deg, #652A81 30%, #852c88 50%);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.503);
+    padding: 10px;
+    z-index: 1000;
+  }
+  .video-none video {
+    width: 100%;
+  }
+  .video-none.active {
+    transform: translateY(-50%) scale(1);
+  }
+  .contener .textes {
+    grid-column: 1/span 2;
+  }
+  .shadow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.547);
+    z-index: 500;
+    transform: scale(0);
+  }
+  .shadow.active {
+    transform: scale(1);
+  }
+  .ds-2 {
+    position: absolute;
+    opacity: inherit;
+    right: 10px;
+    top: 10px;
+    z-index: 1000;
+  }
+  .contener .textes .texte {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contener .textes .para {
+    text-align: center;
+  }
+  .contener .textes .def {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 615px) {
+  .contener .textes .def {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+  .contener .texte .btns {
+    margin: auto;
+  }
+  .contener .footer p {
+    font-size: 10px;
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .contener .textes h1 {
+    font-size: 1.9em;
+    text-align: center;
+  }
+  .contener .textes .para {
+    font-size: 1em;
+  }
+  .contener .textes .texte .para br {
+    display: block;
+  }
+  .contener .textes .btns button {
+    width: 130px;
+    font-size: 14px;
+  }
+  .contener .textes .texte .btns .info {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 325px) {
+  .contener .navigation .menu {
+    position: fixed;
+    right: 10px;
+    top: 65px;
+    width: 30px;
+    height: 160px;
+    flex-direction: column;
+    transform: scale(0);
+    transition: 0.5s;
+  }
+  .dis-menu {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    position: fixed;
+    top: 25px;
+    right: 10px;
+    z-index: 100;
+  }
+  .dis-menu p {
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    font-weight: bold;
+    transform: translate(-50%, -70%);
+    letter-spacing: 2px;
+  }
+  .dis-menu:hover .menu {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 315px) {
+  .contener .textes .texte h1 .titre {
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
