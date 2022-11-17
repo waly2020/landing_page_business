@@ -10,6 +10,14 @@ body {
   min-height: 100vh;
 }
 
+.dis-video {
+  display: none;
+}
+
+.video-none {
+  display: none;
+}
+
 .dis-menu p {
   display: none;
 }
@@ -294,6 +302,7 @@ body {
   }
   .video-none {
     position: fixed;
+    display: block;
     width: 100%;
     top: 50%;
     transform: translateY(-50%) scale(0);
