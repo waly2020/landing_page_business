@@ -32,6 +32,9 @@ $height_menu : 30px;
 body{
     min-height: 100vh;
 }
+.dis-menu p{
+    display: none;
+}
 .background{
     position: absolute;
     width: 100%;
@@ -389,6 +392,7 @@ body{
         top: 50%;
         font-weight: bold;
         transform: translate(-50%,-70%);
+        display: block;
         letter-spacing: 2px;
     }
     .dis-menu:hover .menu{
