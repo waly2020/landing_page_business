@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.background > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.background > * > * {
+  position: absolute;
+}
+.background .calque-1 {
+  background: linear-gradient(45deg, #652A81 30%, #852c88 50%);
+  opacity: 0.8;
+}
+.background .calque-2 .cercle-video {
+  width: 530px;
+  height: 530px;
+  background: linear-gradient(-45deg, #4d469d, #534aae);
+  border-radius: 50%;
+  right: 14vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.background .calque-2 .s1 {
+  right: 40vw;
+  top: 15%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: solid 8px #fdeb87;
+}
+.background .calque-2 .s2 {
+  right: 10VW;
+  top: 20%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: solid 5px #FF4B68;
+}
+.background .calque-2 .s3 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: solid 5px #25b5e7;
+  right: 35vw;
+  bottom: 10%;
+}
+.background .calque-2 .cercle-img {
+  width: 200px;
+  opacity: 0.4;
+}
+.background .calque-2 .cercle-img img {
+  width: 100%;
+}
+.background .calque-2 .cm-1 {
+  transform: translate(-50%, -50%);
+}
+.background .calque-2 .cm-2 {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.background .calque-2 .cm-3 {
+  right: 0;
+  bottom: 0;
+  transform: translate(30%, 40%);
+}
+.background .calque-3 {
+  background: url("../assets/background/13311397_v617batch2-kul-05-technology.jpg");
+  background-size: cover;
+}
+
+.contener {
+  width: 100%;
+  height: 100%;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80px 1fr 70px;
+}
+.contener .footer {
+  grid-column: 1/span 2;
+  border-top: solid 2px #aaa;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.contener .footer p {
+  color: #ccc;
+  font-size: 14px;
+}
+.contener .navigation {
+  grid-column: 1/span 2;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.contener .navigation .logo {
+  width: 130px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contener .navigation .logo img {
+  width: 100%;
+}
+.contener .navigation .menu {
+  width: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+}
+.contener .navigation .menu li {
+  position: relative;
+  list-style-type: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #FEDB8C;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contener .navigation .menu li svg {
+  fill: #652A81;
+}
+.contener .navigation .menu li .data {
+  position: absolute;
+  min-width: 120px;
+  padding: 0 5px;
+  height: 20px;
+  font-size: 12px;
+  background: #fff;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%) scale(0);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: #652A81;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.contener .navigation .menu li:hover .data {
+  transform: translate(-50%, 100%) scale(1);
+}
+.contener .textes {
+  grid-row: 2/span 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+}
+.contener .textes h1 {
+  font-size: 4em;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+.contener .textes .sous-titre {
+  font-size: 0.5em;
+  font-weight: 400;
+}
+.contener .textes .para {
+  font-weight: 700;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 550px;
+  color: #fff;
+  font-size: 2em;
+}
+.contener .textes .para span {
+  color: #009AEA;
+}
+.contener .textes a {
+  margin-right: 20px;
+}
+.contener .textes button {
+  width: 170px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #009AEA;
+  cursor: pointer;
+}
+.contener .textes .def {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 500px;
+  color: #ddd;
+}
+.contener .video {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contener .video video {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
