@@ -116,7 +116,7 @@ body {
   align-items: center;
 }
 .contener .footer p {
-  color: #ccc;
+  color: #888;
   font-size: 14px;
 }
 .contener .navigation {
@@ -264,6 +264,7 @@ body {
   .contener .textes h1 {
     font-size: 2.3em;
     line-height: 5px;
+    text-align: center;
   }
   .contener .textes .para {
     font-size: 1.3em;
@@ -294,8 +295,9 @@ body {
   }
   .ds-1 {
     position: fixed;
-    top: 20px;
-    right: 190px;
+    top: 13vh;
+    left: 50%;
+    transform: translateX(-50%);
     animation: click_me 2s ease infinite;
   }
   .ds-1 svg {
@@ -400,6 +402,12 @@ body {
     right: 10px;
     z-index: 100;
   }
+  .contener .navigation .menu li:hover .data {
+    left: -3px;
+    top: 50%;
+    box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.296);
+    transform: translate(-100%, -50%) scale(1);
+  }
   .dis-menu p {
     position: absolute;
     left: 55%;
@@ -411,11 +419,6 @@ body {
   }
   .dis-menu:hover .menu {
     transform: scale(1);
-  }
-  .ds-1 {
-    position: fixed;
-    top: 20px;
-    right: 60px;
   }
   .contener .textes .para {
     font-size: 1em;
